@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -15,223 +16,279 @@
 }
 
 body{
-    background:#000;
-    color:#d4af37;
+    background:#050505;
+    color:#e8d9cf;
     font-family:Arial,Helvetica,sans-serif;
-    line-height:1.6;
+    line-height:1.5;
 }
 
 header{
-    background:#000;
-    border-bottom:1px solid #806515;
+    background:#050505;
+    border-bottom:1px solid #9a7625;
     position:sticky;
     top:0;
     z-index:1000;
 }
 
 .navbar{
-    max-width:1200px;
+    max-width:1100px;
     margin:auto;
-    min-height:90px;
-    padding:10px 22px;
+    min-height:75px;
+    padding:8px 18px;
+
     display:flex;
     align-items:center;
     justify-content:space-between;
-    gap:25px;
+    gap:20px;
 }
 
 .logo{
-    width:175px;
-    max-height:70px;
+    width:140px;
+    max-height:60px;
     object-fit:contain;
 }
 
 nav{
     display:flex;
-    gap:24px;
+    gap:22px;
 }
 
 nav a{
     color:#d4af37;
     text-decoration:none;
     font-weight:bold;
+    font-size:14px;
 }
 
 nav a:hover{
-    color:#e8d5c4;
+    color:#f1dfcf;
 }
 
-/* CABEÇALHO */
+/* DOURADO METÁLICO */
 
-.hero{
-    text-align:center;
-    padding:80px 20px 100px;
-    position:relative;
-    overflow:hidden;
-}
-
-.hero h1{
-    font-size:clamp(38px,7vw,65px);
-    margin-bottom:15px;
-
+.metal{
     background:linear-gradient(
         90deg,
-        #9a7625,
+        #8b681c,
+        #c59a32,
+        #fff1a8,
         #d4af37,
-        #fff0a3,
-        #d4af37,
-        #9a7625
+        #fff0a0,
+        #8b681c
     );
 
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
+    background-clip:text;
+}
+
+/* TOPO */
+
+.hero{
+    text-align:center;
+    padding:45px 18px 55px;
+
+    background:
+    radial-gradient(
+        circle at 50% 30%,
+        rgba(212,175,55,.10),
+        transparent 42%
+    );
+}
+
+.hero h1{
+    font-size:clamp(34px,6vw,58px);
+    margin-bottom:8px;
 }
 
 .hero p{
-    color:#e8d5c4;
-    max-width:700px;
+    max-width:650px;
     margin:auto;
-    font-size:17px;
+    color:#d8c4b5;
+    font-size:15px;
 }
 
-/* ONDAS */
-
-.wave{
-    position:absolute;
-    left:-15%;
-    bottom:-150px;
-    width:130%;
-    height:260px;
-    border-top:2px solid #806515;
-    border-radius:50%;
-    transform:rotate(-3deg);
-}
-
-.wave2{
-    bottom:-205px;
-    opacity:.3;
-    transform:rotate(3deg);
-}
-
-/* SERVIÇOS */
+/* PRODUTOS */
 
 .container{
-    max-width:1150px;
+    max-width:1100px;
     margin:auto;
-    padding:70px 20px 100px;
+    padding:25px 18px 65px;
 }
 
-.grid{
+.produtos{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:25px;
+    gap:18px;
 }
 
 .card{
-    background:#050505;
+    background:#0b0b0b;
     border:1px solid #806515;
-    border-radius:22px;
-    padding:30px 25px;
+    border-radius:18px;
+
+    padding:24px 20px;
+
     min-height:230px;
+
     display:flex;
     flex-direction:column;
     justify-content:space-between;
+
     transition:.3s;
 }
 
 .card:hover{
-    transform:translateY(-6px);
+    transform:translateY(-4px);
     border-color:#d4af37;
-    box-shadow:0 10px 30px rgba(212,175,55,.12);
+
+    box-shadow:
+    0 10px 30px rgba(212,175,55,.10);
 }
 
 .card h2{
-    font-size:23px;
-    margin-bottom:12px;
-
-    background:linear-gradient(
-        90deg,
-        #9a7625,
-        #d4af37,
-        #fff0a3,
-        #d4af37
-    );
-
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
+    font-size:21px;
+    margin-bottom:10px;
 }
 
 .card p{
-    color:#e8d5c4;
-    font-size:15px;
+    color:#d0beb2;
+    font-size:14px;
 }
 
+/* BOTÃO */
+
 .btn{
-    display:inline-block;
-    margin-top:22px;
-    padding:12px 24px;
-    border:1px solid #d4af37;
-    border-radius:30px;
-    color:#d4af37;
-    text-decoration:none;
-    font-weight:bold;
+    display:block;
+
+    margin-top:20px;
+
+    padding:10px 18px;
+
     text-align:center;
+
+    border:1px solid #d4af37;
+    border-radius:25px;
+
+    color:#000;
+
+    background:linear-gradient(
+        90deg,
+        #8b681c,
+        #d4af37,
+        #fff0a0,
+        #d4af37,
+        #8b681c
+    );
+
+    text-decoration:none;
+
+    font-size:12px;
+    font-weight:bold;
+
+    transition:.3s;
 }
 
 .btn:hover{
-    background:#d4af37;
-    color:#000;
+    transform:scale(1.03);
 }
 
 /* RODAPÉ */
 
 footer{
     border-top:1px solid #806515;
-    padding:45px 20px;
+
+    padding:35px 20px;
+
     text-align:center;
 }
 
 footer h3{
-    margin-bottom:8px;
+    font-size:23px;
 }
 
 footer p{
-    color:#e8d5c4;
-    font-size:14px;
-    margin:5px 0;
+    color:#cbb9ae;
+    font-size:13px;
+    margin-top:6px;
 }
 
 /* CELULAR */
 
-@media(max-width:850px){
+@media(max-width:800px){
 
     .navbar{
         flex-direction:column;
+        min-height:auto;
+        padding:10px 15px;
+    }
+
+    .logo{
+        width:125px;
     }
 
     nav{
         flex-wrap:wrap;
         justify-content:center;
+        gap:12px;
     }
 
-    .grid{
+    .hero{
+        padding:30px 15px 35px;
+    }
+
+    .hero h1{
+        font-size:32px;
+    }
+
+    .hero p{
+        font-size:13px;
+    }
+
+    .container{
+        padding:15px 12px 45px;
+    }
+
+    .produtos{
         grid-template-columns:1fr;
+        gap:10px;
+    }
+
+    .card{
+        min-height:auto;
+        padding:18px 16px;
+    }
+
+    .card h2{
+        font-size:20px;
+    }
+
+    .card p{
+        font-size:13px;
+    }
+
+    .btn{
+        margin-top:15px;
+        padding:9px 15px;
     }
 
 }
 
 </style>
+
 </head>
 
 <body>
+
 
 <header>
 
 <div class="navbar">
 
-<img src="logopachecocred2.jpg"
-     alt="Pacheco Cred"
-     class="logo">
+<img
+src="logopachecocred2.jpg"
+alt="Pacheco Cred"
+class="logo">
 
 <nav>
 
@@ -250,282 +307,386 @@ footer p{
 
 <section class="hero">
 
-<h1>NOSSOS SERVIÇOS</h1>
+<h1 class="metal">
+NOSSOS SERVIÇOS
+</h1>
 
 <p>
-Encontre soluções financeiras de acordo com o seu perfil.
-Confira as opções disponíveis e conheça as condições de cada produto.
+Encontre a solução financeira que procura.
+Clique em <strong>SAIBA MAIS</strong> para conhecer
+as condições de cada produto.
 </p>
-
-<div class="wave"></div>
-<div class="wave wave2"></div>
 
 </section>
 
 
 <main class="container">
 
-<div class="grid">
+<div class="produtos">
 
 
-<!-- APOSENTADO E PENSIONISTA -->
+<!-- A -->
 
 <div class="card">
 
 <div>
 
-<h2>Aposentado e Pensionista</h2>
+<h2 class="metal">
+Abertura de Conta Bancária
+</h2>
 
 <p>
-Soluções de crédito destinadas a aposentados e pensionistas,
-sujeitas à análise e às condições das instituições parceiras.
+Abertura de conta digital ou física,
+conforme disponibilidade da instituição financeira.
 </p>
 
 </div>
 
-<a href="#" class="btn">
+<a href="abertura-conta.html" class="btn">
 SAIBA MAIS
 </a>
 
 </div>
 
 
-<!-- AUXÍLIO MATERNIDADE -->
-
 <div class="card">
 
 <div>
 
-<h2>Auxílio Maternidade</h2>
+<h2 class="metal">
+Abertura de MEI
+</h2>
 
 <p>
-Orientação e atendimento para análise de possibilidade
-de solicitação do benefício.
+Orientação para formalização do
+Microempreendedor Individual.
 </p>
 
 </div>
 
-<a href="#" class="btn">
+<a href="abertura-mei.html" class="btn">
 SAIBA MAIS
 </a>
 
 </div>
 
 
-<!-- BOLSA FAMÍLIA -->
-
 <div class="card">
 
 <div>
 
-<h2>Bolsa Família</h2>
+<h2 class="metal">
+Aposentado e Pensionista
+</h2>
 
 <p>
-Opções de crédito para beneficiários, conforme regras
-e disponibilidade das instituições parceiras.
+Soluções financeiras destinadas a
+aposentados e pensionistas.
 </p>
 
 </div>
 
-<a href="#" class="btn">
+<a href="aposentado-pensionista.html" class="btn">
 SAIBA MAIS
 </a>
 
 </div>
 
 
-<!-- CRÉDITO CLT -->
+<!-- B -->
 
 <div class="card">
 
 <div>
 
-<h2>Crédito CLT</h2>
+<h2 class="metal">
+Auxílio Maternidade
+</h2>
 
 <p>
-Soluções de crédito para trabalhadores com carteira assinada,
+Orientação para solicitação do
+Salário-Maternidade conforme as regras vigentes.
+</p>
+
+</div>
+
+<a href="auxilio-maternidade.html" class="btn">
+SAIBA MAIS
+</a>
+
+</div>
+
+
+<div class="card">
+
+<div>
+
+<h2 class="metal">
+Bolsa Família
+</h2>
+
+<p>
+Crédito destinado a beneficiários que
+atendam aos critérios estabelecidos.
+</p>
+
+</div>
+
+<a href="bolsa-familia.html" class="btn">
+SAIBA MAIS
+</a>
+
+</div>
+
+
+<!-- C -->
+
+<div class="card">
+
+<div>
+
+<h2 class="metal">
+Crédito CLT
+</h2>
+
+<p>
+Soluções de crédito para trabalhadores
+com carteira assinada.
+</p>
+
+</div>
+
+<a href="credito-clt.html" class="btn">
+SAIBA MAIS
+</a>
+
+</div>
+
+
+<div class="card">
+
+<div>
+
+<h2 class="metal">
+Crédito Express
+</h2>
+
+<p>
+Solução de crédito com condições
 sujeitas à análise.
 </p>
 
 </div>
 
-<a href="#" class="btn">
+<a href="credito-express.html" class="btn">
 SAIBA MAIS
 </a>
 
 </div>
 
 
-<!-- CRÉDITO PESSOAL -->
-
 <div class="card">
 
 <div>
 
-<h2>Crédito Pessoal</h2>
+<h2 class="metal">
+Crédito na Conta de Energia
+</h2>
 
 <p>
-Opções de crédito pessoal com condições definidas
-conforme análise do cliente.
+Crédito com desconto na conta de energia,
+conforme disponibilidade.
 </p>
 
 </div>
 
-<a href="#" class="btn">
+<a href="credito-energia.html" class="btn">
 SAIBA MAIS
 </a>
 
 </div>
 
 
-<!-- CONTA DE ENERGIA -->
-
 <div class="card">
 
 <div>
 
-<h2>Crédito na Conta de Energia</h2>
+<h2 class="metal">
+Crédito Pessoal no Boleto/Carnê
+</h2>
 
 <p>
-Possibilidade de crédito com desconto na conta de energia,
-conforme disponibilidade das instituições parceiras.
+Crédito com pagamento por boleto ou carnê,
+conforme análise e condições.
 </p>
 
 </div>
 
-<a href="#" class="btn">
+<a href="credito-boleto-carne.html" class="btn">
 SAIBA MAIS
 </a>
 
 </div>
 
 
-<!-- FGTS -->
+<!-- E -->
 
 <div class="card">
 
 <div>
 
-<h2>FGTS</h2>
+<h2 class="metal">
+Eccor Saúde Telemedicina
+</h2>
 
 <p>
-Antecipação do Saque-Aniversário do FGTS, conforme
-as regras vigentes e análise da operação.
+Acesso a serviços de telemedicina
+conforme o plano contratado.
 </p>
 
 </div>
 
-<a href="#" class="btn">
+<a href="eccor-saude.html" class="btn">
 SAIBA MAIS
 </a>
 
 </div>
 
 
-<!-- LIMPA NOME -->
-
 <div class="card">
 
 <div>
 
-<h2>Limpa Nome</h2>
+<h2 class="metal">
+Empréstimo Pessoal
+</h2>
 
 <p>
-Orientação para clientes que desejam buscar alternativas
-para regularização de suas pendências financeiras.
+Opções de crédito pessoal sujeitas
+à análise de crédito.
 </p>
 
 </div>
 
-<a href="#" class="btn">
+<a href="emprestimo-pessoal.html" class="btn">
 SAIBA MAIS
 </a>
 
 </div>
 
 
-<!-- PORTABILIDADE -->
+<!-- F -->
 
 <div class="card">
 
 <div>
 
-<h2>Portabilidade de Crédito</h2>
+<h2 class="metal">
+FGTS
+</h2>
 
 <p>
-Possibilidade de transferir operações de crédito para
-outra instituição, conforme análise e condições disponíveis.
+Antecipação do Saque-Aniversário do FGTS,
+conforme regras vigentes.
 </p>
 
 </div>
 
-<a href="#" class="btn">
+<a href="fgts.html" class="btn">
 SAIBA MAIS
 </a>
 
 </div>
 
 
-<!-- REFINANCIAMENTO -->
+<!-- L -->
 
 <div class="card">
 
 <div>
 
-<h2>Refinanciamento</h2>
+<h2 class="metal">
+Limite do Cartão de Crédito no Pix
+</h2>
 
 <p>
-Possibilidade de renegociação ou refinanciamento de contratos,
-conforme análise e condições da instituição.
+Utilização do limite do cartão para
+realização de Pix, conforme regras da instituição.
 </p>
 
 </div>
 
-<a href="#" class="btn">
+<a href="limite-cartao-pix.html" class="btn">
 SAIBA MAIS
 </a>
 
 </div>
 
 
-<!-- EMPRÉSTIMO -->
-
 <div class="card">
 
 <div>
 
-<h2>Empréstimo</h2>
+<h2 class="metal">
+Limpa Nome
+</h2>
 
 <p>
-Soluções de empréstimo para diferentes perfis de clientes,
-sujeitas à análise de crédito.
+Orientação para possibilidades de
+negociação de pendências financeiras.
 </p>
 
 </div>
 
-<a href="#" class="btn">
+<a href="limpa-nome.html" class="btn">
 SAIBA MAIS
 </a>
 
 </div>
 
 
-<!-- CONSULTORIA -->
+<!-- P -->
 
 <div class="card">
 
 <div>
 
-<h2>Consultoria Financeira</h2>
+<h2 class="metal">
+Portabilidade de Crédito
+</h2>
 
 <p>
-Atendimento personalizado para auxiliar na escolha
-da solução financeira mais adequada ao seu perfil.
+Possibilidade de transferência de operações
+de crédito conforme análise.
 </p>
 
 </div>
 
-<a href="#" class="btn">
+<a href="portabilidade.html" class="btn">
+SAIBA MAIS
+</a>
+
+</div>
+
+
+<!-- R -->
+
+<div class="card">
+
+<div>
+
+<h2 class="metal">
+Refinanciamento
+</h2>
+
+<p>
+Possibilidade de refinanciamento de contratos
+conforme as condições disponíveis.
+</p>
+
+</div>
+
+<a href="refinanciamento.html" class="btn">
 SAIBA MAIS
 </a>
 
@@ -539,7 +700,9 @@ SAIBA MAIS
 
 <footer>
 
-<h3>PACHECO CRED</h3>
+<h3 class="metal">
+PACHECO CRED
+</h3>
 
 <p>
 Credibilidade, confiança e soluções financeiras.
@@ -550,6 +713,7 @@ Credibilidade, confiança e soluções financeiras.
 </p>
 
 </footer>
+
 
 </body>
 </html>
