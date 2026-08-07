@@ -7,6 +7,7 @@
 <title>Pacheco Cred | Soluções Financeiras</title>
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -18,25 +19,35 @@ html{
 }
 
 body{
-    background:#000;
-background:linear-gradient(
-    90deg,
-    #9a7625,
-    #d4af37,
-    #fff0a3,
-    #d4af37,
-    #9a7625
-);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-
+    background:#050505;
+    color:#f0e3d5;
     font-family:Arial,Helvetica,sans-serif;
     line-height:1.7;
 }
 
+/* DOURADO METÁLICO */
+
+.metal{
+    background:linear-gradient(
+        90deg,
+        #8b681c 0%,
+        #c59a32 20%,
+        #fff1a8 45%,
+        #d4af37 65%,
+        #fff0a0 78%,
+        #8b681c 100%
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+}
+
+/* HEADER */
+
 header{
-    background:#000;
-    border-bottom:1px solid #806515;
+    background:#050505;
+    border-bottom:1px solid #a47d27;
     position:sticky;
     top:0;
     z-index:1000;
@@ -44,13 +55,14 @@ header{
 
 .navbar{
     max-width:1200px;
-    margin:auto;
     min-height:90px;
-    padding:10px 22px;
+    margin:auto;
+    padding:10px 25px;
+
     display:flex;
     align-items:center;
     justify-content:space-between;
-    gap:25px;
+    gap:30px;
 }
 
 .logo{
@@ -61,7 +73,7 @@ header{
 
 nav{
     display:flex;
-    gap:24px;
+    gap:30px;
 }
 
 nav a{
@@ -72,20 +84,31 @@ nav a{
 }
 
 nav a:hover{
-    opacity:.7;
+    color:#f1dcae;
 }
 
 /* HERO */
 
 .hero{
-    min-height:680px;
-    padding:80px 20px 170px;
+    min-height:720px;
+    padding:80px 25px 190px;
+
     display:flex;
     align-items:center;
     justify-content:center;
+
     text-align:center;
+
     position:relative;
     overflow:hidden;
+
+    background:
+    radial-gradient(
+        circle at 50% 30%,
+        rgba(212,175,55,.12),
+        transparent 35%
+    ),
+    #050505;
 }
 
 .hero-content{
@@ -95,31 +118,34 @@ nav a:hover{
 }
 
 .hero-logo{
-    width:260px;
+    width:270px;
     max-width:80%;
-    margin-bottom:28px;
+    margin-bottom:30px;
 }
 
 .hero small{
     display:block;
+    color:#d4af37;
     letter-spacing:5px;
     font-size:12px;
     margin-bottom:18px;
 }
 
 .hero h1{
-    font-size:clamp(42px,8vw,78px);
+    font-size:clamp(44px,8vw,82px);
     line-height:1;
-    margin-bottom:22px;
+    margin-bottom:25px;
 }
 
 .hero h2{
-    font-size:clamp(20px,3vw,30px);
+    color:#f1dfcf;
+    font-size:clamp(21px,3vw,30px);
     font-weight:normal;
     margin-bottom:20px;
 }
 
 .hero p{
+    color:#d9c6b7;
     max-width:700px;
     margin:auto;
     font-size:17px;
@@ -127,37 +153,54 @@ nav a:hover{
 
 .btn{
     display:inline-block;
+
     margin-top:32px;
-    padding:14px 30px;
+    padding:14px 32px;
+
     border:1px solid #d4af37;
-    border-radius:40px;
-    background:#d4af37;
-    color:#000;
+    border-radius:35px;
+
+    background:linear-gradient(
+        90deg,
+        #8b681c,
+        #d4af37,
+        #fff0a0,
+        #d4af37,
+        #8b681c
+    );
+
+    color:#050505;
     text-decoration:none;
     font-weight:bold;
+
+    transition:.3s;
 }
 
 .btn:hover{
-    background:#000;
-    color:#d4af37;
+    transform:translateY(-3px);
+    box-shadow:0 8px 25px rgba(212,175,55,.2);
 }
 
-/* ONDAS GRANDES E ESPAÇADAS */
+/* ONDAS */
 
 .wave{
     position:absolute;
-    left:-15%;
-    bottom:-150px;
-    width:130%;
-    height:260px;
-    border-top:2px solid #d4af37;
+
+    width:140%;
+    height:300px;
+
+    left:-20%;
+    bottom:-180px;
+
+    border-top:1px solid #c49a32;
     border-radius:50%;
+
     transform:rotate(-3deg);
 }
 
 .wave2{
-    bottom:-205px;
-    opacity:.3;
+    bottom:-235px;
+    opacity:.35;
     transform:rotate(3deg);
 }
 
@@ -166,24 +209,28 @@ nav a:hover{
 .section{
     max-width:1150px;
     margin:auto;
-    padding:90px 25px;
+    padding:100px 25px;
 }
 
 .title{
     text-align:center;
-    margin-bottom:50px;
+    margin-bottom:55px;
 }
 
 .title span{
     display:block;
+
+    color:#d9c3b3;
+
     text-transform:uppercase;
     letter-spacing:4px;
+
     font-size:12px;
-    margin-bottom:8px;
+    margin-bottom:10px;
 }
 
 .title h2{
-    font-size:clamp(30px,5vw,48px);
+    font-size:clamp(32px,5vw,50px);
 }
 
 /* CARDS */
@@ -191,31 +238,56 @@ nav a:hover{
 .cards{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:22px;
+    gap:25px;
 }
 
 .card{
-    border:1px solid #806515;
-    border-radius:20px;
-    padding:30px 25px;
-    background:#000;
+    background:#0b0b0b;
+
+    border:1px solid #8f6e25;
+    border-radius:22px;
+
+    padding:32px 27px;
+
+    position:relative;
+    overflow:hidden;
+
+    transition:.3s;
+}
+
+.card::after{
+    content:"";
+
+    position:absolute;
+
+    width:120px;
+    height:120px;
+
+    right:-60px;
+    bottom:-60px;
+
+    background:rgba(232,207,190,.08);
+
+    border-radius:50%;
 }
 
 .card:hover{
-    border-color:#d4af37;
+    transform:translateY(-5px);
+    border-color:#e0bd58;
 }
 
 .card-icon{
-    font-size:30px;
+    font-size:28px;
     margin-bottom:12px;
 }
 
 .card h3{
-    font-size:21px;
+    font-size:22px;
     margin-bottom:10px;
 }
 
 .card p{
+    color:#d8c4b5;
     font-size:15px;
 }
 
@@ -224,19 +296,31 @@ nav a:hover{
 .reasons{
     display:grid;
     grid-template-columns:repeat(2,1fr);
-    gap:18px;
+    gap:20px;
 }
 
 .reason{
-    padding:20px 25px;
-    border-left:2px solid #d4af37;
+    padding:23px 25px;
+
+    background:#0a0a0a;
+
+    border:1px solid #5f4b22;
+    border-left:3px solid #d4af37;
+
+    border-radius:12px;
+
+    color:#e8d9cf;
 }
 
 /* QUEM SOMOS */
 
 .about{
-    border-top:1px solid #806515;
-    border-bottom:1px solid #806515;
+    position:relative;
+
+    background:#090909;
+
+    border-top:1px solid #705820;
+    border-bottom:1px solid #705820;
 }
 
 .about-content{
@@ -245,15 +329,16 @@ nav a:hover{
 }
 
 .about-block{
-    margin-bottom:45px;
+    margin-bottom:48px;
 }
 
 .about-block h3{
-    font-size:26px;
+    font-size:27px;
     margin-bottom:15px;
 }
 
 .about-block p{
+    color:#ded0c7;
     margin-bottom:15px;
 }
 
@@ -262,61 +347,91 @@ nav a:hover{
 }
 
 .about-block li{
-    margin:10px 0;
+    color:#ded0c7;
+    margin:11px 0;
 }
 
 .about-block li::before{
     content:"◆";
+    color:#d4af37;
     margin-right:10px;
 }
 
 /* EMPRESA */
 
 .company{
-    border:1px solid #d4af37;
-    border-radius:20px;
+    background:#0a0a0a;
+
+    border:1px solid #a47d27;
+    border-radius:22px;
+
     padding:35px;
 }
 
 .company p{
+    color:#ded0c7;
     margin:12px 0;
+}
+
+.company strong{
+    color:#d4af37;
 }
 
 /* FINAL */
 
 .final{
-    padding:120px 25px 170px;
+    min-height:500px;
+
+    padding:120px 25px 190px;
+
     text-align:center;
+
     position:relative;
     overflow:hidden;
+
+    background:
+    radial-gradient(
+        circle at center,
+        rgba(212,175,55,.09),
+        transparent 45%
+    );
 }
 
 .final h2{
-    font-size:clamp(30px,5vw,50px);
+    font-size:clamp(32px,5vw,52px);
     margin-bottom:15px;
 }
 
-/* RODAPÉ */
+.final p{
+    color:#ddcbc0;
+}
+
+/* FOOTER */
 
 footer{
-    border-top:1px solid #806515;
-    padding:45px 20px;
+    background:#030303;
+
+    border-top:1px solid #705820;
+
+    padding:50px 20px;
+
     text-align:center;
 }
 
 footer h3{
-    font-size:25px;
+    font-size:26px;
     margin-bottom:8px;
 }
 
 footer p{
+    color:#cbb9ae;
     font-size:14px;
     margin:5px 0;
 }
 
 /* CELULAR */
 
-@media(max-width:800px){
+@media(max-width:850px){
 
     .navbar{
         flex-direction:column;
@@ -326,12 +441,11 @@ footer p{
     nav{
         flex-wrap:wrap;
         justify-content:center;
-        gap:15px;
+        gap:16px;
     }
 
     .hero{
         min-height:650px;
-        padding-top:60px;
     }
 
     .cards{
@@ -343,51 +457,68 @@ footer p{
     }
 
     .section{
-        padding:70px 20px;
+        padding:75px 20px;
     }
 
     .company{
         padding:25px 20px;
     }
+
 }
+
 </style>
 </head>
 
 <body>
 
 <header>
+
 <div class="navbar">
 
-<img src="logopachecocred2.jpg"
-     alt="Pacheco Cred"
-     class="logo">
+<img
+src="logopachecocred2.jpg"
+alt="Pacheco Cred"
+class="logo">
 
 <nav>
+
 <a href="index.html">Início</a>
+
 <a href="servicos.html">Serviços</a>
+
 <a href="vendedoras.html">Vendedoras</a>
+
 </nav>
 
 </div>
+
 </header>
+
+
+<!-- HERO -->
 
 <section class="hero">
 
 <div class="hero-content">
 
-<img src="logopachecocred2.jpg"
-     alt="Pacheco Cred"
-     class="hero-logo">
+<img
+src="logopachecocred2.jpg"
+alt="Pacheco Cred"
+class="hero-logo">
 
 <small>CREDIBILIDADE • CONFIANÇA • SOLUÇÕES</small>
 
-<h1>PACHECO CRED</h1>
+<h1 class="metal">
+PACHECO CRED
+</h1>
 
-<h2>Soluções financeiras para realizar seus objetivos.</h2>
+<h2>
+Soluções financeiras para realizar seus objetivos.
+</h2>
 
 <p>
 Atendimento consultivo, humano e transparente,
-buscando soluções adequadas para cada cliente.
+buscando as melhores soluções para cada cliente.
 </p>
 
 <a href="servicos.html" class="btn">
@@ -401,86 +532,164 @@ CONHEÇA NOSSOS SERVIÇOS
 
 </section>
 
+
+<!-- DESTAQUES -->
+
 <section class="section">
 
 <div class="title">
+
 <span>Nossas soluções</span>
-<h2>Encontre a opção ideal</h2>
+
+<h2 class="metal">
+Encontre a opção ideal
+</h2>
+
 </div>
+
 
 <div class="cards">
 
+
 <div class="card">
-<div class="card-icon">◆</div>
-<h3>Empréstimos</h3>
+
+<div class="card-icon">✦</div>
+
+<h3 class="metal">
+Empréstimos
+</h3>
+
 <p>
 Opções de crédito para diferentes perfis,
 sujeitas à análise.
 </p>
+
 </div>
 
+
 <div class="card">
-<div class="card-icon">◆</div>
-<h3>FGTS</h3>
+
+<div class="card-icon">✦</div>
+
+<h3 class="metal">
+FGTS
+</h3>
+
 <p>
 Consulte as opções disponíveis para
 antecipação do saque-aniversário.
 </p>
+
 </div>
+
 
 <div class="card">
-<div class="card-icon">◆</div>
-<h3>Crédito CLT</h3>
+
+<div class="card-icon">✦</div>
+
+<h3 class="metal">
+Crédito CLT
+</h3>
+
 <p>
-Consulte as possibilidades de crédito
-para trabalhadores.
+Soluções de crédito para trabalhadores,
+sujeitas à análise.
 </p>
-</div>
 
 </div>
+
+
+</div>
+
 
 <div style="text-align:center">
+
 <a href="servicos.html" class="btn">
 VER TODOS OS SERVIÇOS
 </a>
+
 </div>
 
 </section>
+
+
+<!-- DIFERENCIAIS -->
 
 <section class="section">
 
 <div class="title">
+
 <span>Nosso diferencial</span>
-<h2>Por que escolher a Pacheco Cred?</h2>
+
+<h2 class="metal">
+Por que escolher a Pacheco Cred?
+</h2>
+
 </div>
+
 
 <div class="reasons">
 
-<div class="reason">✔ Atendimento personalizado</div>
-<div class="reason">✔ Transparência do início ao fim</div>
-<div class="reason">✔ Agilidade na análise e contratação</div>
-<div class="reason">✔ Segurança nas operações</div>
-<div class="reason">✔ Atendimento humanizado</div>
-<div class="reason">✔ Suporte especializado</div>
-<div class="reason">✔ Soluções financeiras sob medida</div>
-<div class="reason">✔ Compromisso com a satisfação do cliente</div>
+<div class="reason">
+✔ Atendimento personalizado
+</div>
+
+<div class="reason">
+✔ Transparência do início ao fim
+</div>
+
+<div class="reason">
+✔ Agilidade na análise e contratação
+</div>
+
+<div class="reason">
+✔ Segurança nas operações
+</div>
+
+<div class="reason">
+✔ Atendimento humanizado
+</div>
+
+<div class="reason">
+✔ Suporte especializado
+</div>
+
+<div class="reason">
+✔ Soluções financeiras sob medida
+</div>
+
+<div class="reason">
+✔ Compromisso com a satisfação do cliente
+</div>
 
 </div>
 
 </section>
 
-<section class="section about" id="quem-somos">
+
+<!-- QUEM SOMOS -->
+
+<section class="section about">
 
 <div class="title">
+
 <span>Conheça a empresa</span>
-<h2>Quem Somos</h2>
+
+<h2 class="metal">
+Quem Somos
+</h2>
+
 </div>
+
 
 <div class="about-content">
 
+
 <div class="about-block">
 
-<h3>Bem-vindo à Pacheco Cred</h3>
+<h3 class="metal">
+Bem-vindo à Pacheco Cred
+</h3>
 
 <p>
 Na Pacheco Cred, acreditamos que o crédito deve ser uma ferramenta
@@ -504,9 +713,12 @@ que merece atenção.
 
 </div>
 
+
 <div class="about-block">
 
-<h3>Nossa História</h3>
+<h3 class="metal">
+Nossa História
+</h3>
 
 <p>
 A Pacheco Cred nasceu do propósito de oferecer um atendimento financeiro
@@ -527,16 +739,19 @@ duradouras baseadas na confiança, honestidade e excelência.
 </p>
 
 <p>
-Hoje, continuamos evoluindo, investindo em tecnologia, capacitação e
-inovação para oferecer um atendimento cada vez mais eficiente,
+Hoje, continuamos evoluindo, investindo em tecnologia, capacitação
+e inovação para oferecer um atendimento cada vez mais eficiente,
 mantendo os mesmos valores que deram origem à nossa história.
 </p>
 
 </div>
 
+
 <div class="about-block">
 
-<h3>Nossa Missão</h3>
+<h3 class="metal">
+Nossa Missão
+</h3>
 
 <p>
 Oferecer soluções financeiras acessíveis, seguras e personalizadas,
@@ -547,9 +762,12 @@ seus objetivos com tranquilidade e segurança.
 
 </div>
 
+
 <div class="about-block">
 
-<h3>Nossa Visão</h3>
+<h3 class="metal">
+Nossa Visão
+</h3>
 
 <p>
 Ser reconhecida como uma das principais referências em correspondente
@@ -560,11 +778,15 @@ a satisfação dos clientes.
 
 </div>
 
+
 <div class="about-block">
 
-<h3>Nossos Valores</h3>
+<h3 class="metal">
+Nossos Valores
+</h3>
 
 <ul>
+
 <li>Ética e integridade.</li>
 <li>Transparência em todas as negociações.</li>
 <li>Respeito às pessoas.</li>
@@ -575,13 +797,17 @@ a satisfação dos clientes.
 <li>Compromisso com resultados.</li>
 <li>Inovação e melhoria contínua.</li>
 <li>Valorização da confiança conquistada.</li>
+
 </ul>
 
 </div>
 
+
 <div class="about-block">
 
-<h3>O Que Fazemos</h3>
+<h3 class="metal">
+O Que Fazemos
+</h3>
 
 <p>
 A Pacheco Cred atua como correspondente bancário, oferecendo
@@ -590,54 +816,19 @@ solução financeira mais adequada ao seu perfil.
 </p>
 
 <p>
-Nossa equipe acompanha todo o processo, desde a análise inicial até
-a liberação da operação, oferecendo suporte completo e atendimento
-transparente.
+Nossa equipe acompanha todo o processo, desde a análise inicial
+até a liberação da operação, oferecendo suporte completo e
+atendimento transparente.
 </p>
 
 </div>
 
-<div class="about-block">
-
-<h3>Por Que Escolher a Pacheco Cred?</h3>
-
-<p>
-✔ Atendimento personalizado.
-</p>
-
-<p>
-✔ Transparência do início ao fim.
-</p>
-
-<p>
-✔ Agilidade na análise e contratação.
-</p>
-
-<p>
-✔ Segurança em todas as operações.
-</p>
-
-<p>
-✔ Atendimento humanizado.
-</p>
-
-<p>
-✔ Compromisso com a satisfação do cliente.
-</p>
-
-<p>
-✔ Soluções financeiras sob medida.
-</p>
-
-<p>
-✔ Suporte especializado durante todo o processo.
-</p>
-
-</div>
 
 <div class="about-block">
 
-<h3>Nosso Compromisso</h3>
+<h3 class="metal">
+Nosso Compromisso
+</h3>
 
 <p>
 Na Pacheco Cred, entendemos que confiança é conquistada diariamente.
@@ -651,15 +842,18 @@ dos sonhos e objetivos dos nossos clientes.
 </p>
 
 <p>
-Nosso compromisso é prestar um atendimento de excelência, baseado na
-ética, no profissionalismo e no relacionamento de longo prazo.
+Nosso compromisso é prestar um atendimento de excelência, baseado
+na ética, no profissionalismo e no relacionamento de longo prazo.
 </p>
 
 </div>
 
+
 <div class="about-block">
 
-<h3>Nosso Propósito</h3>
+<h3 class="metal">
+Nosso Propósito
+</h3>
 
 <p>
 Transformar vidas por meio de soluções financeiras responsáveis,
@@ -669,21 +863,38 @@ tecnologia, ética e cuidado com cada cliente.
 
 </div>
 
+
 </div>
+
 </section>
+
+
+<!-- INFORMAÇÕES -->
 
 <section class="section">
 
 <div class="title">
+
 <span>Dados empresariais</span>
-<h2>Informações da Empresa</h2>
+
+<h2 class="metal">
+Informações da Empresa
+</h2>
+
 </div>
+
 
 <div class="company">
 
-<p><strong>Nome Empresarial:</strong> Pacheco Cred</p>
+<p>
+<strong>Nome Empresarial:</strong>
+Pacheco Cred
+</p>
 
-<p><strong>CNPJ:</strong> 55.646.113/0001-50</p>
+<p>
+<strong>CNPJ:</strong>
+55.646.113/0001-50
+</p>
 
 <p>
 <strong>Atuação:</strong>
@@ -706,9 +917,14 @@ personalizado, segurança e agilidade.
 
 </section>
 
+
+<!-- FINAL -->
+
 <section class="final">
 
-<h2>Vamos encontrar a melhor solução para você?</h2>
+<h2 class="metal">
+Vamos encontrar a melhor solução para você?
+</h2>
 
 <p>
 Fale com nossa equipe e conheça as opções disponíveis para o seu perfil.
@@ -722,9 +938,12 @@ FALAR COM UMA VENDEDORA
 
 </section>
 
+
 <footer>
 
-<h3>PACHECO CRED</h3>
+<h3 class="metal">
+PACHECO CRED
+</h3>
 
 <p>
 Credibilidade, confiança e soluções financeiras para quem busca
@@ -738,4 +957,4 @@ realizar sonhos com segurança.
 </footer>
 
 </body>
-</html>
+    </html>
