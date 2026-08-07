@@ -6,8 +6,6 @@
 
 <title>Pacheco Cred | Soluções Financeiras</title>
 
-<meta name="description" content="Pacheco Cred - Correspondente bancário e soluções financeiras.">
-
 <style>
 *{
     margin:0;
@@ -28,17 +26,17 @@ body{
 
 header{
     background:#000;
-    border-bottom:1px solid #8f741d;
+    border-bottom:1px solid #806515;
     position:sticky;
     top:0;
-    z-index:999;
+    z-index:1000;
 }
 
 .navbar{
     max-width:1200px;
     margin:auto;
     min-height:90px;
-    padding:12px 25px;
+    padding:10px 22px;
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -46,14 +44,14 @@ header{
 }
 
 .logo{
-    width:180px;
-    max-height:75px;
+    width:175px;
+    max-height:70px;
     object-fit:contain;
 }
 
 nav{
     display:flex;
-    gap:25px;
+    gap:24px;
 }
 
 nav a{
@@ -64,24 +62,20 @@ nav a{
 }
 
 nav a:hover{
-    color:#fff;
+    opacity:.7;
 }
 
 /* HERO */
 
 .hero{
-    min-height:700px;
+    min-height:680px;
+    padding:80px 20px 170px;
     display:flex;
     align-items:center;
     justify-content:center;
     text-align:center;
-    padding:80px 20px 150px;
     position:relative;
     overflow:hidden;
-
-    background:
-    radial-gradient(circle at 50% 25%,rgba(212,175,55,.12),transparent 35%),
-    #000;
 }
 
 .hero-content{
@@ -93,19 +87,20 @@ nav a:hover{
 .hero-logo{
     width:260px;
     max-width:80%;
-    margin-bottom:25px;
+    margin-bottom:28px;
 }
 
 .hero small{
+    display:block;
     letter-spacing:5px;
-    text-transform:uppercase;
     font-size:12px;
+    margin-bottom:18px;
 }
 
 .hero h1{
-    font-size:clamp(38px,7vw,70px);
-    line-height:1.05;
-    margin:15px 0 20px;
+    font-size:clamp(42px,8vw,78px);
+    line-height:1;
+    margin-bottom:22px;
 }
 
 .hero h2{
@@ -122,15 +117,14 @@ nav a:hover{
 
 .btn{
     display:inline-block;
-    margin-top:30px;
+    margin-top:32px;
     padding:14px 30px;
     border:1px solid #d4af37;
-    border-radius:35px;
+    border-radius:40px;
     background:#d4af37;
     color:#000;
     text-decoration:none;
     font-weight:bold;
-    transition:.3s;
 }
 
 .btn:hover{
@@ -138,22 +132,22 @@ nav a:hover{
     color:#d4af37;
 }
 
-/* ONDAS GRANDES */
+/* ONDAS GRANDES E ESPAÇADAS */
 
 .wave{
     position:absolute;
-    width:120%;
-    height:220px;
-    left:-10%;
-    bottom:-130px;
+    left:-15%;
+    bottom:-150px;
+    width:130%;
+    height:260px;
     border-top:2px solid #d4af37;
     border-radius:50%;
     transform:rotate(-3deg);
 }
 
 .wave2{
-    bottom:-165px;
-    opacity:.35;
+    bottom:-205px;
+    opacity:.3;
     transform:rotate(3deg);
 }
 
@@ -171,14 +165,15 @@ nav a:hover{
 }
 
 .title span{
+    display:block;
     text-transform:uppercase;
     letter-spacing:4px;
     font-size:12px;
+    margin-bottom:8px;
 }
 
 .title h2{
     font-size:clamp(30px,5vw,48px);
-    margin-top:8px;
 }
 
 /* CARDS */
@@ -190,22 +185,19 @@ nav a:hover{
 }
 
 .card{
-    border:1px solid #8f741d;
+    border:1px solid #806515;
     border-radius:20px;
     padding:30px 25px;
     background:#000;
-    transition:.3s;
 }
 
 .card:hover{
-    transform:translateY(-6px);
     border-color:#d4af37;
-    box-shadow:0 10px 35px rgba(212,175,55,.12);
 }
 
 .card-icon{
-    font-size:32px;
-    margin-bottom:10px;
+    font-size:30px;
+    margin-bottom:12px;
 }
 
 .card h3{
@@ -233,8 +225,8 @@ nav a:hover{
 /* QUEM SOMOS */
 
 .about{
-    border-top:1px solid #8f741d;
-    border-bottom:1px solid #8f741d;
+    border-top:1px solid #806515;
+    border-bottom:1px solid #806515;
 }
 
 .about-content{
@@ -247,7 +239,7 @@ nav a:hover{
 }
 
 .about-block h3{
-    font-size:27px;
+    font-size:26px;
     margin-bottom:15px;
 }
 
@@ -268,7 +260,7 @@ nav a:hover{
     margin-right:10px;
 }
 
-/* INFORMAÇÕES */
+/* EMPRESA */
 
 .company{
     border:1px solid #d4af37;
@@ -283,8 +275,8 @@ nav a:hover{
 /* FINAL */
 
 .final{
+    padding:120px 25px 170px;
     text-align:center;
-    padding:100px 25px;
     position:relative;
     overflow:hidden;
 }
@@ -297,9 +289,443 @@ nav a:hover{
 /* RODAPÉ */
 
 footer{
-    border-top:1px solid #8f741d;
+    border-top:1px solid #806515;
     padding:45px 20px;
     text-align:center;
 }
 
-footer h
+footer h3{
+    font-size:25px;
+    margin-bottom:8px;
+}
+
+footer p{
+    font-size:14px;
+    margin:5px 0;
+}
+
+/* CELULAR */
+
+@media(max-width:800px){
+
+    .navbar{
+        flex-direction:column;
+        padding:15px;
+    }
+
+    nav{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+    }
+
+    .hero{
+        min-height:650px;
+        padding-top:60px;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .reasons{
+        grid-template-columns:1fr;
+    }
+
+    .section{
+        padding:70px 20px;
+    }
+
+    .company{
+        padding:25px 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="navbar">
+
+<img src="logopachecocred2.jpg"
+     alt="Pacheco Cred"
+     class="logo">
+
+<nav>
+<a href="index.html">Início</a>
+<a href="servicos.html">Serviços</a>
+<a href="vendedoras.html">Vendedoras</a>
+</nav>
+
+</div>
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<img src="logopachecocred2.jpg"
+     alt="Pacheco Cred"
+     class="hero-logo">
+
+<small>CREDIBILIDADE • CONFIANÇA • SOLUÇÕES</small>
+
+<h1>PACHECO CRED</h1>
+
+<h2>Soluções financeiras para realizar seus objetivos.</h2>
+
+<p>
+Atendimento consultivo, humano e transparente,
+buscando soluções adequadas para cada cliente.
+</p>
+
+<a href="servicos.html" class="btn">
+CONHEÇA NOSSOS SERVIÇOS
+</a>
+
+</div>
+
+<div class="wave"></div>
+<div class="wave wave2"></div>
+
+</section>
+
+<section class="section">
+
+<div class="title">
+<span>Nossas soluções</span>
+<h2>Encontre a opção ideal</h2>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<div class="card-icon">◆</div>
+<h3>Empréstimos</h3>
+<p>
+Opções de crédito para diferentes perfis,
+sujeitas à análise.
+</p>
+</div>
+
+<div class="card">
+<div class="card-icon">◆</div>
+<h3>FGTS</h3>
+<p>
+Consulte as opções disponíveis para
+antecipação do saque-aniversário.
+</p>
+</div>
+
+<div class="card">
+<div class="card-icon">◆</div>
+<h3>Crédito CLT</h3>
+<p>
+Consulte as possibilidades de crédito
+para trabalhadores.
+</p>
+</div>
+
+</div>
+
+<div style="text-align:center">
+<a href="servicos.html" class="btn">
+VER TODOS OS SERVIÇOS
+</a>
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="title">
+<span>Nosso diferencial</span>
+<h2>Por que escolher a Pacheco Cred?</h2>
+</div>
+
+<div class="reasons">
+
+<div class="reason">✔ Atendimento personalizado</div>
+<div class="reason">✔ Transparência do início ao fim</div>
+<div class="reason">✔ Agilidade na análise e contratação</div>
+<div class="reason">✔ Segurança nas operações</div>
+<div class="reason">✔ Atendimento humanizado</div>
+<div class="reason">✔ Suporte especializado</div>
+<div class="reason">✔ Soluções financeiras sob medida</div>
+<div class="reason">✔ Compromisso com a satisfação do cliente</div>
+
+</div>
+
+</section>
+
+<section class="section about" id="quem-somos">
+
+<div class="title">
+<span>Conheça a empresa</span>
+<h2>Quem Somos</h2>
+</div>
+
+<div class="about-content">
+
+<div class="about-block">
+
+<h3>Bem-vindo à Pacheco Cred</h3>
+
+<p>
+Na Pacheco Cred, acreditamos que o crédito deve ser uma ferramenta
+para transformar vidas, realizar sonhos e proporcionar tranquilidade
+financeira. Por isso, oferecemos um atendimento consultivo, humano
+e transparente, sempre buscando as melhores soluções para cada cliente.
+</p>
+
+<p>
+Somos uma empresa especializada em correspondente bancário e soluções
+financeiras, atuando com seriedade, responsabilidade e compromisso
+em todas as etapas do atendimento.
+</p>
+
+<p>
+Nosso maior patrimônio é a confiança de nossos clientes. Cada atendimento
+é realizado com ética, respeito e dedicação, porque entendemos que por
+trás de cada solicitação existe uma história, um objetivo e um sonho
+que merece atenção.
+</p>
+
+</div>
+
+<div class="about-block">
+
+<h3>Nossa História</h3>
+
+<p>
+A Pacheco Cred nasceu do propósito de oferecer um atendimento financeiro
+diferente: mais próximo, transparente e focado nas reais necessidades
+das pessoas.
+</p>
+
+<p>
+Fundada por Luciana Pacheco, profissional apaixonada pelo atendimento
+ao cliente e pelo mercado financeiro, a empresa foi criada para
+simplificar o acesso ao crédito e oferecer orientação especializada
+durante todo o processo.
+</p>
+
+<p>
+Desde o início, nosso compromisso sempre foi construir relações
+duradouras baseadas na confiança, honestidade e excelência.
+</p>
+
+<p>
+Hoje, continuamos evoluindo, investindo em tecnologia, capacitação e
+inovação para oferecer um atendimento cada vez mais eficiente,
+mantendo os mesmos valores que deram origem à nossa história.
+</p>
+
+</div>
+
+<div class="about-block">
+
+<h3>Nossa Missão</h3>
+
+<p>
+Oferecer soluções financeiras acessíveis, seguras e personalizadas,
+promovendo inclusão financeira por meio de um atendimento ético,
+transparente e de excelência, ajudando nossos clientes a realizarem
+seus objetivos com tranquilidade e segurança.
+</p>
+
+</div>
+
+<div class="about-block">
+
+<h3>Nossa Visão</h3>
+
+<p>
+Ser reconhecida como uma das principais referências em correspondente
+bancário e consultoria financeira no Brasil, destacando-se pela
+qualidade do atendimento, inovação, credibilidade e compromisso com
+a satisfação dos clientes.
+</p>
+
+</div>
+
+<div class="about-block">
+
+<h3>Nossos Valores</h3>
+
+<ul>
+<li>Ética e integridade.</li>
+<li>Transparência em todas as negociações.</li>
+<li>Respeito às pessoas.</li>
+<li>Atendimento humanizado.</li>
+<li>Excelência na prestação de serviços.</li>
+<li>Agilidade com responsabilidade.</li>
+<li>Segurança e confidencialidade das informações.</li>
+<li>Compromisso com resultados.</li>
+<li>Inovação e melhoria contínua.</li>
+<li>Valorização da confiança conquistada.</li>
+</ul>
+
+</div>
+
+<div class="about-block">
+
+<h3>O Que Fazemos</h3>
+
+<p>
+A Pacheco Cred atua como correspondente bancário, oferecendo
+consultoria especializada para auxiliar clientes na escolha da
+solução financeira mais adequada ao seu perfil.
+</p>
+
+<p>
+Nossa equipe acompanha todo o processo, desde a análise inicial até
+a liberação da operação, oferecendo suporte completo e atendimento
+transparente.
+</p>
+
+</div>
+
+<div class="about-block">
+
+<h3>Por Que Escolher a Pacheco Cred?</h3>
+
+<p>
+✔ Atendimento personalizado.
+</p>
+
+<p>
+✔ Transparência do início ao fim.
+</p>
+
+<p>
+✔ Agilidade na análise e contratação.
+</p>
+
+<p>
+✔ Segurança em todas as operações.
+</p>
+
+<p>
+✔ Atendimento humanizado.
+</p>
+
+<p>
+✔ Compromisso com a satisfação do cliente.
+</p>
+
+<p>
+✔ Soluções financeiras sob medida.
+</p>
+
+<p>
+✔ Suporte especializado durante todo o processo.
+</p>
+
+</div>
+
+<div class="about-block">
+
+<h3>Nosso Compromisso</h3>
+
+<p>
+Na Pacheco Cred, entendemos que confiança é conquistada diariamente.
+Por isso, trabalhamos com responsabilidade, respeito e dedicação para
+oferecer uma experiência segura, transparente e eficiente.
+</p>
+
+<p>
+Mais do que conceder crédito, queremos ser parceiros na realização
+dos sonhos e objetivos dos nossos clientes.
+</p>
+
+<p>
+Nosso compromisso é prestar um atendimento de excelência, baseado na
+ética, no profissionalismo e no relacionamento de longo prazo.
+</p>
+
+</div>
+
+<div class="about-block">
+
+<h3>Nosso Propósito</h3>
+
+<p>
+Transformar vidas por meio de soluções financeiras responsáveis,
+construindo relações de confiança e oferecendo atendimento que une
+tecnologia, ética e cuidado com cada cliente.
+</p>
+
+</div>
+
+</div>
+</section>
+
+<section class="section">
+
+<div class="title">
+<span>Dados empresariais</span>
+<h2>Informações da Empresa</h2>
+</div>
+
+<div class="company">
+
+<p><strong>Nome Empresarial:</strong> Pacheco Cred</p>
+
+<p><strong>CNPJ:</strong> 55.646.113/0001-50</p>
+
+<p>
+<strong>Atuação:</strong>
+Correspondente Bancário e Consultoria em Soluções Financeiras.
+</p>
+
+<p>
+<strong>Área de Atendimento:</strong>
+Atendimento presencial e digital, oferecendo suporte para clientes
+em diversas regiões do Brasil.
+</p>
+
+<p>
+<strong>Especialidade:</strong>
+Soluções financeiras para pessoas físicas, com foco em atendimento
+personalizado, segurança e agilidade.
+</p>
+
+</div>
+
+</section>
+
+<section class="final">
+
+<h2>Vamos encontrar a melhor solução para você?</h2>
+
+<p>
+Fale com nossa equipe e conheça as opções disponíveis para o seu perfil.
+</p>
+
+<a href="vendedoras.html" class="btn">
+FALAR COM UMA VENDEDORA
+</a>
+
+<div class="wave"></div>
+
+</section>
+
+<footer>
+
+<h3>PACHECO CRED</h3>
+
+<p>
+Credibilidade, confiança e soluções financeiras para quem busca
+realizar sonhos com segurança.
+</p>
+
+<p>
+© 2026 Pacheco Cred — Todos os direitos reservados.
+</p>
+
+</footer>
+
+</body>
+</html>
