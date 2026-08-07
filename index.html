@@ -1,1 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Pacheco Cred | Soluções Financeiras</title>
+
+<meta name="description" content="Pacheco Cred - Correspondente bancário e soluções financeiras.">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#000;
+    color:#d4af37;
+    font-family:Arial,Helvetica,sans-serif;
+    line-height:1.7;
+}
+
+header{
+    background:#000;
+    border-bottom:1px solid #8f741d;
+    position:sticky;
+    top:0;
+    z-index:999;
+}
+
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    min-height:90px;
+    padding:12px 25px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:25px;
+}
+
+.logo{
+    width:180px;
+    max-height:75px;
+    object-fit:contain;
+}
+
+nav{
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    color:#d4af37;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:15px;
+}
+
+nav a:hover{
+    color:#fff;
+}
+
+/* HERO */
+
+.hero{
+    min-height:700px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:80px 20px 150px;
+    position:relative;
+    overflow:hidden;
+
+    background:
+    radial-gradient(circle at 50% 25%,rgba(212,175,55,.12),transparent 35%),
+    #000;
+}
+
+.hero-content{
+    max-width:850px;
+    position:relative;
+    z-index:2;
+}
+
+.hero-logo{
+    width:260px;
+    max-width:80%;
+    margin-bottom:25px;
+}
+
+.hero small{
+    letter-spacing:5px;
+    text-transform:uppercase;
+    font-size:12px;
+}
+
+.hero h1{
+    font-size:clamp(38px,7vw,70px);
+    line-height:1.05;
+    margin:15px 0 20px;
+}
+
+.hero h2{
+    font-size:clamp(20px,3vw,30px);
+    font-weight:normal;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    font-size:17px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:14px 30px;
+    border:1px solid #d4af37;
+    border-radius:35px;
+    background:#d4af37;
+    color:#000;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#000;
+    color:#d4af37;
+}
+
+/* ONDAS GRANDES */
+
+.wave{
+    position:absolute;
+    width:120%;
+    height:220px;
+    left:-10%;
+    bottom:-130px;
+    border-top:2px solid #d4af37;
+    border-radius:50%;
+    transform:rotate(-3deg);
+}
+
+.wave2{
+    bottom:-165px;
+    opacity:.35;
+    transform:rotate(3deg);
+}
+
+/* SEÇÕES */
+
+.section{
+    max-width:1150px;
+    margin:auto;
+    padding:90px 25px;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.title span{
+    text-transform:uppercase;
+    letter-spacing:4px;
+    font-size:12px;
+}
+
+.title h2{
+    font-size:clamp(30px,5vw,48px);
+    margin-top:8px;
+}
+
+/* CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.card{
+    border:1px solid #8f741d;
+    border-radius:20px;
+    padding:30px 25px;
+    background:#000;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    border-color:#d4af37;
+    box-shadow:0 10px 35px rgba(212,175,55,.12);
+}
+
+.card-icon{
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.card h3{
+    font-size:21px;
+    margin-bottom:10px;
+}
+
+.card p{
+    font-size:15px;
+}
+
+/* DIFERENCIAIS */
+
+.reasons{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.reason{
+    padding:20px 25px;
+    border-left:2px solid #d4af37;
+}
+
+/* QUEM SOMOS */
+
+.about{
+    border-top:1px solid #8f741d;
+    border-bottom:1px solid #8f741d;
+}
+
+.about-content{
+    max-width:950px;
+    margin:auto;
+}
+
+.about-block{
+    margin-bottom:45px;
+}
+
+.about-block h3{
+    font-size:27px;
+    margin-bottom:15px;
+}
+
+.about-block p{
+    margin-bottom:15px;
+}
+
+.about-block ul{
+    list-style:none;
+}
+
+.about-block li{
+    margin:10px 0;
+}
+
+.about-block li::before{
+    content:"◆";
+    margin-right:10px;
+}
+
+/* INFORMAÇÕES */
+
+.company{
+    border:1px solid #d4af37;
+    border-radius:20px;
+    padding:35px;
+}
+
+.company p{
+    margin:12px 0;
+}
+
+/* FINAL */
+
+.final{
+    text-align:center;
+    padding:100px 25px;
+    position:relative;
+    overflow:hidden;
+}
+
+.final h2{
+    font-size:clamp(30px,5vw,50px);
+    margin-bottom:15px;
+}
+
+/* RODAPÉ */
+
+footer{
+    border-top:1px solid #8f741d;
+    padding:45px 20px;
+    text-align:center;
+}
+
+footer h
