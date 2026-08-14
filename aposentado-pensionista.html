@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Aposentado e Pensionista| Pacheco Cred</title>
+<title>Aposentado e Pensionista | Pacheco Cred</title>
 
 <style>
 
@@ -31,6 +31,7 @@ header{
     max-width:1100px;
     margin:auto;
     padding:8px 18px;
+
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -59,6 +60,8 @@ nav a:hover{
     color:#f1dfcf;
 }
 
+/* DOURADO METÁLICO */
+
 .metal{
     background:linear-gradient(
         90deg,
@@ -75,31 +78,37 @@ nav a:hover{
     background-clip:text;
 }
 
+/* TOPO */
+
 .hero{
     text-align:center;
-    padding:45px 18px 35px;
+    padding:42px 18px 30px;
 
     background:
     radial-gradient(
-        circle at 50% 30%,
-        rgba(212,175,55,.10),
+        circle at 50% 25%,
+        rgba(212,175,55,.12),
         transparent 45%
     );
 }
 
 .hero h1{
-    font-size:clamp(32px,6vw,52px);
+    font-size:clamp(30px,6vw,52px);
     line-height:1.1;
-    margin-bottom:8px;
+    margin-bottom:10px;
 }
 
 .hero p{
+    max-width:700px;
+    margin:auto;
     color:#d8c4b5;
     font-size:14px;
 }
 
+/* CONTEÚDO */
+
 .container{
-    max-width:1000px;
+    max-width:950px;
     margin:auto;
     padding:15px 18px 55px;
 }
@@ -108,8 +117,8 @@ nav a:hover{
     background:#0b0b0b;
     border:1px solid #806515;
     border-radius:16px;
-    padding:24px;
-    margin-bottom:14px;
+    padding:22px;
+    margin-bottom:13px;
 }
 
 .bloco h2{
@@ -132,9 +141,20 @@ nav a:hover{
     margin-right:9px;
 }
 
+/* DESTAQUE */
+
 .destaque{
-    border:1px solid #d4af37;
+    border-color:#d4af37;
+
+    background:
+    linear-gradient(
+        135deg,
+        #0b0b0b,
+        #11100d
+    );
 }
+
+/* BOTÃO */
 
 .area-botao{
     text-align:center;
@@ -143,11 +163,16 @@ nav a:hover{
 
 .botao{
     display:inline-block;
+
     padding:13px 28px;
+
     border-radius:30px;
+
     text-decoration:none;
+
     font-size:14px;
     font-weight:bold;
+
     color:#000;
 
     background:linear-gradient(
@@ -160,20 +185,36 @@ nav a:hover{
     );
 
     border:1px solid #d4af37;
+
+    transition:.3s;
 }
+
+.botao:hover{
+    transform:scale(1.03);
+}
+
+/* VOLTAR */
 
 .voltar{
     display:block;
     text-align:center;
+
     color:#d4af37;
+
     text-decoration:none;
+
     font-size:13px;
+
     margin-top:18px;
 }
 
+/* RODAPÉ */
+
 footer{
     border-top:1px solid #806515;
+
     padding:30px 20px;
+
     text-align:center;
 }
 
@@ -186,6 +227,8 @@ footer p{
     font-size:12px;
     margin-top:5px;
 }
+
+/* CELULAR */
 
 @media(max-width:700px){
 
@@ -227,7 +270,6 @@ footer p{
     .bloco{
         padding:17px 15px;
         margin-bottom:9px;
-        border-radius:13px;
     }
 
     .bloco h2{
@@ -264,7 +306,9 @@ class="logo">
 <nav>
 
 <a href="index.html">Início</a>
+
 <a href="servicos.html">Serviços</a>
+
 <a href="vendedoras.html">Vendedoras</a>
 
 </nav>
@@ -275,6 +319,83 @@ class="logo">
 
 
 <section class="hero">
+
+<h1 class="metal">
+🏦 Empréstimo Consignado INSS
+</h1>
+
+<p>
+Crédito consignado para aposentados e pensionistas
+do INSS, sujeito às regras da instituição financeira.
+</p>
+
+</section>
+
+
+<main class="container">
+
+
+<section class="bloco destaque">
+
+<h2 class="metal">
+✅ Regras para consultar
+</h2>
+
+<ul>
+
+<li>Ser aposentado ou pensionista do INSS.</li>
+
+<li>Estar elegível para contratação.</li>
+
+<li>Possuir margem consignável disponível.</li>
+
+<li>A contratação está sujeita à análise e aprovação da instituição financeira.</li>
+
+<li>O valor, prazo e condições dependem da margem disponível e das regras vigentes.</li>
+
+</ul>
+
+</section>
+
+
+<section class="bloco">
+
+<h2 class="metal">
+📋 Documentos necessários
+</h2>
+
+<ul>
+
+<li>🪪 Documento de identificação com foto.</li>
+
+<li>🧾 CPF.</li>
+
+<li>📄 Extrato de empréstimos consignados atualizado.</li>
+
+<li>📑 Dados do benefício do INSS.</li>
+
+</ul>
+
+</section>
+
+
+<section class="bloco destaque">
+
+<h2 class="metal">
+⚠️ Importante
+</h2>
+
+<ul>
+
+<li>A simulação não garante aprovação ou liberação de crédito.</li>
+
+<li>As condições podem variar conforme o benefício.</li>
+
+<li>As condições também podem variar conforme a instituição financeira.</li>
+
+</ul>
+
+</section>
 
 
 <div class="area-botao">
@@ -311,4 +432,4 @@ Credibilidade, confiança e soluções financeiras.
 </footer>
 
 </body>
-  </html>
+</html>
